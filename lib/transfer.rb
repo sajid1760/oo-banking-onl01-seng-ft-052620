@@ -45,9 +45,9 @@ attr_accessor :sender, :receiver, :status, :amount
  def execute_transaction
    if @status == "pending" then
      
-     if (sender.status == "open" && sender.balance > @amount) then
-       sender.deposit(0 - @amount)
-       receiver.deposit(@amount)
+     if (@sender.status == "open" && @sender.balance > @amount) then
+       @sender.deposit(0 - @amount)
+       @receiver.deposit(@amount)
        @status = "complete"
        returnvalue = "complete"
      else
@@ -63,8 +63,8 @@ attr_accessor :sender, :receiver, :status, :amount
  
  def reverse_transfer
    if @status == "complete" then
-     receiver.deposit(0 - @amount)
-     sender.deposit(@amount)
+     @receiver.deposit(0 - @amount)
+     @sender.deposit(@amount)
    end
    @status = "reversed"
  end
