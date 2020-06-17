@@ -16,5 +16,9 @@ attr_accessor :sender, :receiver, :status
  def execute_transaction
    sender.deposit(0 - amount)
    receiver.deposit(amount)
-
+   self.status = "complete"
+ end
+ 
+ 
 end
+ 
