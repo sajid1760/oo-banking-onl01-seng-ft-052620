@@ -18,12 +18,12 @@ attr_accessor :sender, :receiver, :status, :amount
      if sender.balance >= amount then
        sender.deposit(0 - @amount)
        receiver.deposit(@amount)
+       @status = "complete"
      else
-       "Transaction rejected. Please check your account balance."
-       break
+       @status = "Transaction rejected. Please check your account balance."
      end
    end
-   @status = "complete"
+   @status
  end
  
  def reverse_transfer
