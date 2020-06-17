@@ -15,16 +15,16 @@ attr_accessor :sender, :receiver, :status
 
  def execute_transaction
    if @status = "pending" then
-     sender.deposit(0 - amount)
-     receiver.deposit(amount)
+     sender.deposit(0 - @amount)
+     receiver.deposit(@amount)
    end
    self.status = "complete"
  end
  
  def reverse_transfer
    if @status = "complete" then
-     receiver.deposit(0 - amount)
-     sender.deposit(amount)
+     receiver.deposit(0 - @amount)
+     sender.deposit(@amount)
    end
    self.status = "pending"
  end
