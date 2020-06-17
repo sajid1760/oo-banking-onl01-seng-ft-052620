@@ -22,5 +22,6 @@ attr_accessor :sender, :receiver, :status
  end
  
  
+ 
 end
  
