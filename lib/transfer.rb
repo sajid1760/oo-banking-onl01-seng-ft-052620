@@ -15,8 +15,12 @@ attr_accessor :sender, :receiver, :status, :amount
 
  def execute_transaction
    if @status = "pending" then
-     sender.deposit(0 - @amount)
-     receiver.deposit(@amount)
+     if sender.balance >= amount then
+       sender.deposit(0 - @amount)
+       receiver.deposit(@amount)
+     else
+       "Transaction rejected. Please check your account balance."
+       break
    end
    @status = "complete"
  end
