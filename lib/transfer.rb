@@ -73,7 +73,7 @@ end
  
 amanda = BankAccount.new(amanda)
 terrance = BankAccount.new(terrance)
-#terrance.close_account
+terrance.close_account
 puts amanda.status
 puts terrance.status
 closed_account_transfer = Transfer.new(amanda, terrance, 50)
