@@ -19,11 +19,13 @@ attr_accessor :sender, :receiver, :status, :amount
        sender.deposit(0 - @amount)
        receiver.deposit(@amount)
        @status = "complete"
+       returnvalue = "complete"
      else
-       @status = "Transaction rejected. Please check your account balance."
+       @status = "rejected"
+       returnvalue = "Transaction rejected. Please check your account balance."
      end
    end
-   @status
+   returnvalue
  end
  
  def reverse_transfer
