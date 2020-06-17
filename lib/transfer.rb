@@ -30,7 +30,7 @@ attr_accessor :sender, :receiver, :status, :amount
      receiver.deposit(0 - @amount)
      sender.deposit(@amount)
    end
-   @status = "pending"
+   @status = "reversed"
  end
  
 end
