@@ -14,7 +14,7 @@ attr_accessor :sender, :receiver, :status, :amount
  end
 
  def execute_transaction
-   if @status = "pending" then
+   if @status == "pending" then
      if sender.balance >= amount then
        sender.deposit(0 - @amount)
        receiver.deposit(@amount)
@@ -27,7 +27,7 @@ attr_accessor :sender, :receiver, :status, :amount
  end
  
  def reverse_transfer
-   if @status = "complete" then
+   if @status == "complete" then
      receiver.deposit(0 - @amount)
      sender.deposit(@amount)
    end
