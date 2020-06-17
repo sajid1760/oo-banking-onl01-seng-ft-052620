@@ -40,3 +40,6 @@ attr_accessor :sender, :receiver, :status, :amount
  
 end
  
+amanda = 
+terrance.close_account
+closed_account_transfer = Transfer.new(amanda, terrance, 50)
