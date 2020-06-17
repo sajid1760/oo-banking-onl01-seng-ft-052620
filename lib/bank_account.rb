@@ -16,4 +16,7 @@ def display_balance
   @balance
 end
 
+def valid?
+  if (self.status == "open" && )
+
 end
