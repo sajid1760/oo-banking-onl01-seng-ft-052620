@@ -18,7 +18,7 @@ attr_accessor :sender, :receiver, :status, :amount
      sender.deposit(0 - @amount)
      receiver.deposit(@amount)
    end
-   self.status = "complete"
+   @status = "complete"
  end
  
  def reverse_transfer
@@ -26,7 +26,7 @@ attr_accessor :sender, :receiver, :status, :amount
      receiver.deposit(0 - @amount)
      sender.deposit(@amount)
    end
-   self.status = "pending"
+   @status = "pending"
  end
  
 end
