@@ -27,7 +27,9 @@ attr_accessor :sender, :receiver, :status, :amount
      end
      
    end
-   returnvalue
+   puts returnvalue 
+   puts sender.balance 
+   puts receiver.balance
  end
  
  def reverse_transfer
@@ -40,6 +42,7 @@ attr_accessor :sender, :receiver, :status, :amount
  
 end
  
-amanda = 
-terrance.close_account
+amanda = BankAccount.new(amanda)
+terrance = BankAccount.new(terrance)
+#terrance.close_account
 closed_account_transfer = Transfer.new(amanda, terrance, 50)
