@@ -76,6 +76,7 @@ terrance = BankAccount.new(terrance)
 #terrance.close_account
 puts amanda
 puts amanda.balance 
+puts amanda.status
 terrance.status
 #closed_account_transfer = Transfer.new(amanda, terrance, 50)
 #closed_account_transfer.execute_transaction
